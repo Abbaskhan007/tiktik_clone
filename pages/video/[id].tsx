@@ -15,7 +15,7 @@ import LikeButton from "../../components/LikeButton";
 import { useSelector } from "react-redux";
 import Comments from "../../components/Comments";
 
-export default function videoDetail({ videoPost }: video) {
+export default function VideoDetail({ videoPost }: video) {
   const router = useRouter();
   const [isPlayed, setIsPlayed] = useState(false);
   const [isMuted, setIsMuted] = useState(false);

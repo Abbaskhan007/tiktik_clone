@@ -6,7 +6,7 @@ import Axios from "axios";
 import { BASE_URL, topics } from "../utils/constants";
 import { useSelector } from "react-redux";
 
-export default function upload() {
+export default function Upload() {
   const [typeError, setTypeError] = useState(false);
   const [loading, setLoading] = useState(false);
   const [caption, setCaption] = useState("");

@@ -26,7 +26,7 @@ export default function Discover() {
       </p>
       <div className="flex gap-3 flex-wrap">
         {topics.map(topic => (
-          <div key={topic.name} onClick={() => onTopicChange(topic.name)} key={topic.name}>
+          <div key={topic.name} onClick={() => onTopicChange(topic.name)} >
             <div
               className={
                 currentTopic === topic.name ? activeTopicStyle : topicStyle
