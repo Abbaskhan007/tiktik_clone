@@ -11,6 +11,7 @@ import { login } from "../state";
 
 const Home: NextPage = ({ posts }: videos[]) => {
   const dispatch = useDispatch();
+  console.log("---");
   useEffect(() => {
     const initialUser = localStorage.getItem("tiktik-user")
       ? JSON.parse(localStorage.getItem("tiktik-user"))

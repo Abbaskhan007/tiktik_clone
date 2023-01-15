@@ -16,12 +16,13 @@ export default function Upload() {
   const router = useRouter();
 
   const videoUploadRef = useRef<HTMLInputElement>(null);
+  
   const onVideoUpload = async (e: any) => {
     setLoading(true);
     const selectedFile = e.target.files[0];
     const fileTypes = ["video/mp4", "video/webm", "video/ogg"];
     const checkType = fileTypes.includes(selectedFile.type);
-    console.log("check type", checkType);
+
     if (!checkType) {
       setTypeError(true);
       return;
@@ -123,12 +124,7 @@ export default function Upload() {
           className="border-2 border-gray-200 rounded outline-none text-md capitalize lg:p-2 p-1 w-full"
         >
           {topics.map(topic => (
-            <option
-              key={topic.name}
-              value={topic.name}
-              className="bg-red-200"
-            
-            >
+            <option key={topic.name} value={topic.name} className="bg-red-200">
               {topic.name}
             </option>
           ))}
