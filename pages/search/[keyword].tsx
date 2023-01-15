@@ -39,7 +39,11 @@ const Search = ({ accounts, videos }: iProps) => {
       {isAccounts ? (
         accounts?.length ? (
           accounts.map(account => (
-            <div className="flex items-center space-x-3 py-2 border border-gray-200 px-4 hover:bg-gray-100 rounded-md mb-2">
+            <Link
+              href={`/profile/${account._id}`}
+              key={account._id}
+              className="flex items-center cursor-pointer space-x-3 py-2 border border-gray-200 px-4 hover:bg-gray-100 rounded-md mb-2"
+            >
               <Image
                 src={account.profileImage}
                 alt="profile-Image"
@@ -48,13 +52,13 @@ const Search = ({ accounts, videos }: iProps) => {
                 className="rounded-full"
               />
               <p className="text-md font-medium">{account.name}</p>
-            </div>
+            </Link>
           ))
         ) : (
           <NoResult text="No Account Presents" />
         )
       ) : videos?.length ? (
-        videos.map(post => <Videocard post={post} />)
+        videos.map(post => <Videocard key={post._id} post={post} />)
       ) : (
         <NoResult text="No Video Present" />
       )}

@@ -27,7 +27,10 @@ const Comments = ({
         <div className="overflow-y-scroll lg:h-[475px]">
           {comments.length ? (
             comments.map(cmt => (
-              <div className="flex flex-row items-center space-x-3 mt-4">
+              <div
+                key={cmt._id}
+                className="flex flex-row items-center space-x-3 mt-4"
+              >
                 <Image
                   width={40}
                   height={40}

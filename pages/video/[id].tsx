@@ -73,7 +73,7 @@ export default function videoDetail({ videoPost }: video) {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 h-[100vh] w-full absolute left-0 right-0 ">
+    <div className="grid grid-cols-1 md:grid-cols-3 h-[100vh] w-full absolute left-0 right-0 bg-white z-10">
       <div className="relative col-span-2 bg-black ">
         <AiOutlineCloseCircle
           onClick={() => router.back()}

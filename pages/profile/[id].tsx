@@ -45,12 +45,12 @@ const Profile = ({ user, likedPosts, userPosts }: iProps) => {
       </div>
       {isUserVideos ? (
         userPosts?.length ? (
-          userPosts.map(post => <Videocard post={post} />)
+          userPosts.map(post => <Videocard key={post._id} post={post} />)
         ) : (
           <NoResult text="No Video Posted" />
         )
       ) : likedPosts?.length ? (
-        likedPosts.map(post => <Videocard post={post} />)
+        likedPosts.map(post => <Videocard key={post._id} post={post} />)
       ) : (
         <NoResult text="No Video Likes Yet" />
       )}

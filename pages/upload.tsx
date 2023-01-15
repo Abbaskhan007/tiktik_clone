@@ -123,7 +123,12 @@ export default function upload() {
           className="border-2 border-gray-200 rounded outline-none text-md capitalize lg:p-2 p-1 w-full"
         >
           {topics.map(topic => (
-            <option value={topic.name} className="bg-red-200" key={topic.name}>
+            <option
+              key={topic.name}
+              value={topic.name}
+              className="bg-red-200"
+            
+            >
               {topic.name}
             </option>
           ))}

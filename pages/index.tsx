@@ -23,7 +23,7 @@ const Home: NextPage = ({ posts }: videos[]) => {
   return (
     <div className="mt-6">
       {posts.length ? (
-        posts.map(post => <Videocard post={post} />)
+        posts.map(post => <Videocard key={post._id} post={post} />)
       ) : (
         <NoResult text="No Video Present" />
       )}
