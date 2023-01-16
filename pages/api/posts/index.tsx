@@ -17,7 +17,8 @@ export default async function handler(
     case "GET":
       const data = await postModel.find({}).populate("postedBy");
       console.log("-------", data);
-      res.status(200).json(data);
+      return res.status(200).json(data);
+      break;
 
     case "POST":
       const { postedBy, video, caption, category } = req.body;
